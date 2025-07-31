@@ -1,0 +1,62 @@
+.timeline {
+  position: relative;
+  padding-left: 90px; /* Reduced padding for desktop */
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 45px; /* Position the line 45px from the left edge of the .timeline container */
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--border);
+}
+
+.item {
+  position: relative; /* Crucial for absolute positioning of its children */
+  margin-bottom: 60px; /* Further increased space between timeline items */
+}
+
+.item::before {
+  content: '';
+  position: absolute;
+  left: -53px; /* Corrected calculation for desktop */
+  top: 8px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--red);
+  border: 3px solid var(--background);
+  z-index: 1; /* Ensure circle is above the line */
+}
+
+.year {
+  position: absolute;
+  left: -70px; /* Adjusted to be closer to the line for desktop */
+  top: 12px; /* Adjusted to improve vertical alignment with the dot */
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  color: var(--red); /* Year label to red */
+  font-size: 0.9rem;
+  line-height: 1; /* Adjust line height for better vertical alignment */
+}
+
+@media (max-width: 768px) {
+  .timeline {
+    padding-left: 60px; /* Reduced padding for mobile */
+  }
+
+  .timeline::before {
+    left: 30px; /* Adjust line position for mobile */
+  }
+
+  .item::before {
+    left: -38px; /* Corrected calculation for mobile */
+  }
+
+  .year {
+    left: -55px; /* Adjusted to add a little more space for mobile */
+    top: 12px; /* Adjusted to improve vertical alignment with the dot */
+  }
+}

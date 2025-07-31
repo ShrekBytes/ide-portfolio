@@ -1,0 +1,32 @@
+.statusBar {
+  background-color: var(--sidebar-bg);
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--border);
+}
+
+.credit {
+  color: var(--text-secondary);
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+}
+
+.contact a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  margin-left: 1rem;
+}
+
+.contact a:hover {
+  color: var(--foreground);
+}
+
+.contact svg {
+  width: 18px;
+  height: 18px;
+}

@@ -1,0 +1,59 @@
+.sidebar {
+  width: 300px;
+  background-color: var(--sidebar-bg);
+  border-left: 1px solid var(--border);
+  padding: 1rem;
+}
+
+.header {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.content {
+  text-align: center;
+}
+
+.avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.name {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.bio {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.aboutMeSection {
+  background-color: var(--sidebar-bg); /* Use sidebar background for this section */
+  padding: 2rem; /* Adjust padding for section */
+}
+
+/* Styles for the new AboutMeSection layout */
+.aboutMeLayout {
+  display: flex;
+  align-items: center;
+  gap: 4rem; /* Space between text and image */
+  max-width: 1000px; /* Limit overall width */
+  margin: 0 auto; /* Center the layout */
+}
+
+.aboutMeTextContent {
+  flex: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .aboutMeLayout {
+    flex-direction: column; /* Stack vertically on mobile */
+    gap: 2rem;
+  }
+}

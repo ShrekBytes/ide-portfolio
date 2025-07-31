@@ -1,0 +1,17 @@
+.mainContent {
+  height: 100%;
+  overflow-y: auto;
+  scroll-snap-type: y proximity;
+}
+
+.sectionWrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  scroll-snap-align: start;
+}
+
+.altBackground {
+  background-color: var(--sidebar-bg);
+}

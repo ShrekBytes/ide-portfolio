@@ -1,0 +1,62 @@
+.mobileMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 75%; /* Further decreased width */
+  height: 100%;
+  background-color: var(--sidebar-bg);
+  z-index: 1000;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  padding-top: 4rem; /* Space for close button */
+}
+
+.mobileMenu.open {
+  transform: translateX(0);
+}
+
+.closeButton {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: var(--foreground);
+  cursor: pointer;
+}
+
+.menuContent {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.header {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+.fileList {
+  list-style: none;
+  padding: 0 1rem;
+  margin: 0;
+}
+
+.fileItem {
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.fileItem:hover {
+  background-color: var(--accent-dark);
+}
+
+.active {
+  background-color: var(--accent);
+  color: var(--background);
+}

@@ -1,0 +1,14 @@
+.breadcrumbs {
+  background-color: var(--background);
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-secondary);
+}
+
+.breadcrumbs span {
+  margin-right: 0.5rem;
+}
+
+.active {
+  color: var(--foreground);
+}

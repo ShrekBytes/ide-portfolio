@@ -1,0 +1,190 @@
+.section {
+  height: 100%; /* Changed from 100vh to 100% */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  padding: 0 6rem 8rem 6rem; /* Add horizontal padding and bottom padding for gap */
+  box-sizing: border-box;
+  scroll-snap-align: start;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--red); /* Titles to red */
+}
+
+.item {
+  margin-bottom: 60px; /* Further increased space between timeline items */
+  padding: 1rem; /* Add padding to the item itself */
+  border-radius: 8px; /* Add border-radius for a softer look */
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for smooth effect */
+}
+
+.item:hover {
+  background-color: rgba(var(--sidebar-bg), 0.7); /* Darker background change */
+  transform: scale(1.01); /* Subtle zoom effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+}
+
+.itemTitle {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--green); /* Highlights to green */
+}
+
+.company {
+  color: var(--text-secondary);
+}
+
+.date {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.list li {
+  position: relative;
+  padding-left: 1.5rem; /* Space for the custom bullet */
+  margin-bottom: 0.5rem;
+}
+
+.list li::before {
+  content: '\25B6'; /* Unicode for a black right-pointing triangle */
+  color: var(--text-secondary); /* Color of the triangle to text-secondary */
+  position: absolute;
+  left: 0;
+  top: 0.2rem;
+  font-size: 0.8rem;
+}
+
+.description {
+  margin-bottom: 1rem;
+  color: var(--foreground);
+}
+
+.link {
+  color: var(--green); /* Link color */
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.emailLink {
+  display: inline-block;
+  background-color: var(--green); /* Email link background color */
+  color: var(--background);
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.emailLink:hover {
+  background-color: var(--accent-dark);
+}
+
+.hollowBox {
+  border: 1px solid var(--text-secondary);
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 4px;
+  color: var(--text-secondary);
+}
+
+.stackContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.stackTag {
+  background-color: var(--text-secondary); /* Stacks to text-secondary */
+  color: var(--background); /* Text color remains background for contrast */
+  padding: 0.3rem 0.7rem;
+  border-radius: 6px; /* Slightly increased border-radius */
+  font-size: 0.8rem;
+  display: flex; /* Enable flexbox for centering */
+  align-items: center; /* Vertically center text */
+  justify-content: center; /* Horizontally center text (optional, but good for single line) */
+}
+
+.skillsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem; /* Slightly larger gap for skills */
+  margin-top: 1rem;
+}
+
+.skillTag {
+  background-color: var(--cyan); /* Tokyo Night Cyan for skill tags */
+  color: var(--background);
+  padding: 0.4rem 0.9rem;
+  border-radius: 8px; /* More rounded corners */
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Add transition for hover */
+}
+
+.skillTag:hover {
+  background-color: var(--accent); /* Change color on hover */
+  transform: translateY(-3px); /* Subtle lift effect */
+}
+
+.greenText {
+  color: var(--green);
+}
+
+.yellowText {
+  color: var(--yellow);
+}
+
+.purpleText {
+  color: var(--purple);
+}
+
+.cyanText {
+  color: var(--cyan);
+}
+
+.redText {
+  color: var(--red);
+}
+
+.projectImage {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.projectLinkButton {
+  display: inline-block;
+  background-color: var(--accent); /* Use accent color for button background */
+  color: var(--background); /* Text color */
+  padding: 0.7rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  margin-top: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+.projectLinkButton:hover {
+  background-color: var(--accent-dark); /* Darker accent on hover */
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 0 2rem 4rem 2rem; /* Reduced padding for mobile */
+  }
+}
