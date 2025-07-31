@@ -291,7 +291,7 @@ code {
   gap: 8px;
 }
 
-.status-right a {
+.status-item {
   cursor: pointer;
   padding: 2px 4px;
   border-radius: 2px;
@@ -300,19 +300,20 @@ code {
   color: inherit;
 }
 
-.status-right a:hover {
+.status-item:hover {
   background-color: var(--hover-bg);
   color: var(--text-primary);
 }
 
 .status-icon {
-  width: 16px;
-  height: 16px;
-  filter: invert(70%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+  width: 14px;
+  height: 14px;
+  filter: invert(60%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
   transition: filter 0.15s ease;
+  vertical-align: middle;
 }
 
-.status-right a:hover .status-icon {
+.status-item:hover .status-icon {
   filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
 }
 
