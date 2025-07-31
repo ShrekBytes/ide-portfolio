@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - VSCode Style</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="vscode-container">
+        <!-- Mobile Overlay -->
+        <div class="mobile-overlay" id="mobile-overlay"></div>
+        
+        <!-- Title Bar -->
+        <div class="title-bar">
+          <div class="mobile-menu-toggle" id="mobile-menu-toggle">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </div>
+          <div class="title-bar-center">
+            <span class="app-title">Portfolio - Visual Studio Code</span>
+          </div>
+        </div>
+        <!-- Left Sidebar - File Explorer -->
+        <aside class="sidebar sidebar-left">
+          <div class="sidebar-header">
+            <span class="sidebar-title">EXPLORER</span>
+          </div>
+          <nav class="file-explorer">
+            <div class="folder open">
+              <div class="folder-header">
+                <span class="folder-icon">📁</span>
+                <span class="folder-name">PORTFOLIO</span>
+              </div>
+              <ul class="file-list">
+                <li class="file" data-section="about">
+                  <span class="file-icon">📄</span>
+                  <span class="file-name">about.md</span>
+                </li>
+                <li class="file" data-section="experience">
+                  <span class="file-icon">💼</span>
+                  <span class="file-name">experience.json</span>
+                </li>
+                <li class="file" data-section="skills">
+                  <span class="file-icon">⚡</span>
+                  <span class="file-name">skills.js</span>
+                </li>
+                <li class="file" data-section="projects">
+                  <span class="file-icon">🚀</span>
+                  <span class="file-name">projects.tsx</span>
+                </li>
+                <li class="file" data-section="contact">
+                  <span class="file-icon">📧</span>
+                  <span class="file-name">contact.html</span>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+          <!-- Breadcrumbs -->
+          <div class="breadcrumbs">
+            <span class="breadcrumb-item">PORTFOLIO</span>
+            <span class="breadcrumb-separator">></span>
+            <span class="breadcrumb-item current" id="current-section">about.md</span>
+          </div>
+          
+          <div class="editor-content">
+            <div id="content-area">
+              <!-- Dynamic content will be loaded here -->
+            </div>
+          </div>
+        </main>
+
+        <!-- Right Sidebar - Introduction -->
+        <aside class="sidebar sidebar-right">
+          <div class="intro-section">
+            <div class="profile-image">
+              <img src="/src/assets/profile.svg" alt="Profile" id="profile-img">
+            </div>
+            <div class="intro-content">
+              <h1 class="name">Your Name</h1>
+              <p class="title">Full Stack Developer</p>
+              <div class="bio">
+                <p>Passionate developer with expertise in modern web technologies. Love creating beautiful, functional applications that solve real-world problems.</p>
+              </div>
+              <div class="social-links">
+                <a href="#" class="social-link">GitHub</a>
+                <a href="#" class="social-link">LinkedIn</a>
+                <a href="#" class="social-link">Twitter</a>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Status Bar -->
+        <div class="status-bar">
+          <div class="status-left">
+            <span class="status-item">designed & built by Walid</span>
+          </div>
+          <div class="status-right">
+            <span class="status-item" id="status-email">shrekbytes@duck.com</span>
+            <a href="https://github.com/shrekbytes" target="_blank" class="status-item" id="status-github"><img src="/src/assets/github.svg" alt="GitHub" class="status-icon"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
